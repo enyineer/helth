@@ -5,6 +5,18 @@ export const services = () => {
   return db.service.findMany()
 }
 
+export const servicesWithOpenIncidents = () => {
+  return db.service.findMany({
+    include: {
+      incidents: {
+        where: {
+          closed: false,
+        },
+      },
+    },
+  })
+}
+
 export const service = ({ id }) => {
   return db.service.findUnique({
     where: { id },

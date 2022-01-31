@@ -79,6 +79,10 @@ const Incident = ({ incident }) => {
               <th>Closed at</th>
               <td>{timeTag(incident.closedAt)}</td>
             </tr>
+            <tr>
+              <th>Message</th>
+              <td>{incident.message}</td>
+            </tr>
           </tbody>
         </table>
       </div>

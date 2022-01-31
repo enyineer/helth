@@ -71,6 +71,8 @@ const IncidentsList = ({ incidents }) => {
             <th>Created at</th>
             <th>Closed</th>
             <th>Closed at</th>
+            <th>Type</th>
+            <th>Message</th>
             <th>&nbsp;</th>
           </tr>
         </thead>
@@ -82,6 +84,8 @@ const IncidentsList = ({ incidents }) => {
               <td>{timeTag(incident.createdAt)}</td>
               <td>{checkboxInputTag(incident.closed)}</td>
               <td>{timeTag(incident.closedAt)}</td>
+              <td>{truncate(incident.type)}</td>
+              <td>{truncate(incident.message)}</td>
               <td>
                 <nav className="rw-table-actions">
                   <Link

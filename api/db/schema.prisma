@@ -20,12 +20,14 @@ model Service {
 }
 
 model Incident {
-  id        String    @id @default(uuid())
-  service   Service   @relation(fields: [serviceId], references: [id])
+  id        String       @id @default(uuid())
+  service   Service      @relation(fields: [serviceId], references: [id])
   serviceId String
-  createdAt DateTime  @default(now())
-  closed    Boolean   @default(false)
+  createdAt DateTime     @default(now())
+  closed    Boolean      @default(false)
   closedAt  DateTime?
+  type      IncidentType
+  message   String
 }
 
 model IncidentReport {

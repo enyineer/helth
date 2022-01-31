@@ -13,11 +13,15 @@
     ]
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.17",
     "@redwoodjs/auth": "0.43.0",
     "@redwoodjs/forms": "v0.43.0",
     "@redwoodjs/router": "v0.43.0",
     "@redwoodjs/web": "v0.43.0",
     "bootstrap": "^5.1.3",
+    "luxon": "^2.3.0",
     "netlify-identity-widget": "^1.9.2",
     "prop-types": "15.8.1",
     "react": "17.0.2",

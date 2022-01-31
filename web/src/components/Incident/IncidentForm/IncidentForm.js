@@ -7,6 +7,7 @@ import {
   CheckboxField,
   DatetimeLocalField,
   Submit,
+  SelectField,
 } from '@redwoodjs/forms'
 
 const formatDatetime = (value) => {
@@ -29,7 +30,6 @@ const IncidentForm = (props) => {
           titleClassName="rw-form-error-title"
           listClassName="rw-form-error-list"
         />
-
         <Label
           name="serviceId"
           className="rw-label"
@@ -44,9 +44,7 @@ const IncidentForm = (props) => {
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
         />
-
         <FieldError name="serviceId" className="rw-field-error" />
-
         <Label
           name="closed"
           className="rw-label"
@@ -60,9 +58,7 @@ const IncidentForm = (props) => {
           className="rw-input"
           errorClassName="rw-input rw-input-error"
         />
-
         <FieldError name="closed" className="rw-field-error" />
-
         <Label
           name="closedAt"
           className="rw-label"
@@ -76,8 +72,46 @@ const IncidentForm = (props) => {
           className="rw-input"
           errorClassName="rw-input rw-input-error"
         />
-
         <FieldError name="closedAt" className="rw-field-error" />
+        <Label
+          name="message"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Message
+        </Label>
+        <TextField
+          name="message"
+          defaultValue={props.incident?.message}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+          validation={{ required: true }}
+        />
+        <FieldError name="message" className="rw-field-error" />
+
+        <Label
+          name="type"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Type
+        </Label>
+
+        <SelectField
+          name="type"
+          multiple={false}
+          validation={{ required: true }}
+        >
+          <option selected={props.incident?.type === 'DOWN'} value="DOWN">
+            Down
+          </option>
+          <option selected={props.incident?.type === 'WARN'} value="WARN">
+            Warn
+          </option>
+          <option selected={props.incident?.type === 'INFO'} value="INFO">
+            Info
+          </option>
+        </SelectField>
 
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">

@@ -1,13 +1,12 @@
 import { MetaTags } from '@redwoodjs/web'
+import StatusCell from 'src/components/Status/StatusCell'
 
 const DashPage = () => {
   return (
     <>
       <MetaTags title="Dash" description="Dash page" />
-      <h1>DashPage</h1>
-      <p>
-        This is the dashboard! In the future, this will show a service overview
-      </p>
+      <h1>Service Helth</h1>
+      <StatusCell />
     </>
   )
 }

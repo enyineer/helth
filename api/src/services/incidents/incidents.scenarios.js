@@ -1,11 +1,17 @@
 export const standard = defineScenario({
   incident: {
     one: {
-      data: { service: { create: { name: 'String', description: 'String' } } },
+      data: {
+        type: 'INFO',
+        service: { create: { name: 'String', description: 'String' } },
+      },
     },
 
     two: {
-      data: { service: { create: { name: 'String', description: 'String' } } },
+      data: {
+        type: 'INFO',
+        service: { create: { name: 'String', description: 'String' } },
+      },
     },
   },
 })

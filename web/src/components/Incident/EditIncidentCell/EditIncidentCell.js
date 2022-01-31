@@ -12,6 +12,7 @@ export const QUERY = gql`
       createdAt
       closed
       closedAt
+      message
     }
   }
 `
@@ -23,6 +24,7 @@ const UPDATE_INCIDENT_MUTATION = gql`
       createdAt
       closed
       closedAt
+      message
     }
   }
 `

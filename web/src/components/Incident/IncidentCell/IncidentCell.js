@@ -8,6 +8,7 @@ export const QUERY = gql`
       createdAt
       closed
       closedAt
+      message
     }
   }
 `
