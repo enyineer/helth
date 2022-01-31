@@ -33,11 +33,11 @@ const FrameLayout = ({ children }) => {
                 </NavDropdown>
               )}
             </Nav>
+            {isAuthenticated && <div className="me-1">{currentUser.email}</div>}
+            <Button onClick={isAuthenticated ? logOut : logIn}>
+              {isAuthenticated ? 'Log Out' : 'Log In'}
+            </Button>
           </Navbar.Collapse>
-          {isAuthenticated && <div className="me-1">{currentUser.email}</div>}
-          <Button onClick={isAuthenticated ? logOut : logIn}>
-            {isAuthenticated ? 'Log Out' : 'Log In'}
-          </Button>
         </Container>
       </Navbar>
       {children}
