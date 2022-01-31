@@ -24,9 +24,10 @@ export const schema = gql`
   }
 
   type Mutation {
-    createService(input: CreateServiceInput!): Service! @requireAuth
+    createService(input: CreateServiceInput!): Service!
+      @requireAuth(roles: "admin")
     updateService(id: String!, input: UpdateServiceInput!): Service!
-      @requireAuth
-    deleteService(id: String!): Service! @requireAuth
+      @requireAuth(roles: "admin")
+    deleteService(id: String!): Service! @requireAuth(roles: "admin")
   }
 `

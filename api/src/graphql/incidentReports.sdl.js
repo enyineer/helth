@@ -35,7 +35,8 @@ export const schema = gql`
     updateIncidentReport(
       id: String!
       input: UpdateIncidentReportInput!
-    ): IncidentReport! @requireAuth
-    deleteIncidentReport(id: String!): IncidentReport! @requireAuth
+    ): IncidentReport! @requireAuth(roles: "admin")
+    deleteIncidentReport(id: String!): IncidentReport!
+      @requireAuth(roles: "admin")
   }
 `

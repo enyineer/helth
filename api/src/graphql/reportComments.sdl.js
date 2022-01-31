@@ -24,7 +24,8 @@ export const schema = gql`
     updateReportComment(
       id: String!
       input: UpdateReportCommentInput!
-    ): ReportComment! @requireAuth
-    deleteReportComment(id: String!): ReportComment! @requireAuth
+    ): ReportComment! @requireAuth(roles: "admin")
+    deleteReportComment(id: String!): ReportComment!
+      @requireAuth(roles: "admin")
   }
 `
