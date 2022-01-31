@@ -5,6 +5,8 @@ A PoC-kind of a health-Dashboard - Made with Redwood in only a few hours. Comple
 ## Demo
 [Click me!](https://helthapp.netlify.app/)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e21241a5-d193-4048-a6da-71c143570727/deploy-status)](https://app.netlify.com/sites/helthapp/deploys)
+
 ## TODOs
 - Service page with Incident Reports and Report Comments
 - Implement dbAuth
