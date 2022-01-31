@@ -20,5 +20,9 @@
   },
   "prisma": {
     "seed": "yarn rw exec seed"
+  },
+  "scripts": {
+    "db:create": "docker run -p 5432:5432 --name helth-pg -e POSTGRES_PASSWORD=dev -e POSTGRES_USER=dev -e POSTGRES_DB=helth -d postgres",
+    "db:start": "docker start helth-pg"
   }
 }

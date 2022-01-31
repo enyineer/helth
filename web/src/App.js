@@ -4,6 +4,10 @@ import { RedwoodApolloProvider } from '@redwoodjs/web/apollo'
 import FatalErrorPage from 'src/pages/FatalErrorPage'
 import Routes from 'src/Routes'
 
+import 'bootstrap/dist/css/bootstrap.css'
+// Put any other imports below so that CSS from your
+// components takes precedence over default styles.
+import './scaffold.css'
 import './index.css'
 
 const App = () => (
