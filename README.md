@@ -1,5 +1,12 @@
 # HELTH Dashboard
 
+A PoC-kind of a health-Dashboard - Made with Redwood in only a few hours. Complete with Admin-Dashboard and Identitiy-Integration.
+
+## TODOs
+- Implement dbAuth
+- Add integration Endpoints for external systems
+- Add automatic checks of endpoints
+
 ## Getting Started
 - [Tutorial](https://redwoodjs.com/tutorial/welcome-to-redwood): getting started and complete overview guide.
 - [Docs](https://redwoodjs.com/docs/introduction): using the Redwood Router, handling assets and files, list of command-line tools, and more.
