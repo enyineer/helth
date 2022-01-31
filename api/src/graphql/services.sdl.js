@@ -8,9 +8,9 @@ export const schema = gql`
   }
 
   type Query {
-    services: [Service!]! @requireAuth
-    service(id: String!): Service @requireAuth
-    servicesWithOpenIncidents: [Service!]! @requireAuth
+    services: [Service!]! @skipAuth
+    service(id: String!): Service @skipAuth
+    servicesWithOpenIncidents: [Service!]! @skipAuth
   }
 
   input CreateServiceInput {

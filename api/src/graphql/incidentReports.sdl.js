@@ -11,8 +11,8 @@ export const schema = gql`
   }
 
   type Query {
-    incidentReports: [IncidentReport!]! @requireAuth
-    incidentReport(id: String!): IncidentReport @requireAuth
+    incidentReports: [IncidentReport!]! @skipAuth
+    incidentReport(id: String!): IncidentReport @skipAuth
   }
 
   input CreateIncidentReportInput {

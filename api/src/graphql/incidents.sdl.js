@@ -17,8 +17,8 @@ export const schema = gql`
   }
 
   type Query {
-    incidents: [Incident!]! @requireAuth
-    incident(id: String!): Incident @requireAuth
+    incidents: [Incident!]! @skipAuth
+    incident(id: String!): Incident @skipAuth
   }
 
   input CreateIncidentInput {

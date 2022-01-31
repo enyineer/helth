@@ -6,8 +6,8 @@ export const schema = gql`
   }
 
   type Query {
-    reportComments: [ReportComment!]! @requireAuth
-    reportComment(id: String!): ReportComment @requireAuth
+    reportComments: [ReportComment!]! @skipAuth
+    reportComment(id: String!): ReportComment @skipAuth
   }
 
   input CreateReportCommentInput {
