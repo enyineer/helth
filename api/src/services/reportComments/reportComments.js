@@ -1,4 +1,5 @@
 import { db } from 'src/lib/db'
+import { requireAuth } from 'src/lib/auth'
 
 export const reportComments = () => {
   return db.reportComment.findMany()
@@ -11,12 +12,14 @@ export const reportComment = ({ id }) => {
 }
 
 export const createReportComment = ({ input }) => {
+  requireAuth()
   return db.reportComment.create({
     data: input,
   })
 }
 
 export const updateReportComment = ({ id, input }) => {
+  requireAuth('admin')
   return db.reportComment.update({
     data: input,
     where: { id },
@@ -24,6 +27,7 @@ export const updateReportComment = ({ id, input }) => {
 }
 
 export const deleteReportComment = ({ id }) => {
+  requireAuth('admin')
   return db.reportComment.delete({
     where: { id },
   })
