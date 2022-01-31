@@ -2,6 +2,9 @@
 
 A PoC-kind of a health-Dashboard - Made with Redwood in only a few hours. Complete with Admin-Dashboard and Identitiy-Integration.
 
+## Demo
+[Click me!](https://helthapp.netlify.app/)
+
 ## TODOs
 - Implement dbAuth
 - Add integration Endpoints for external systems
